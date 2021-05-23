@@ -14,7 +14,7 @@ functionHomePage fHP = new functionHomePage();
     log.urlLogin();
     log.login();
     BrowserUtils.sleep(3);
-    fHP.homeButton.click();
+
     }
 
     @Then("user see Latest on Blogs news")
