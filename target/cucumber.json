@@ -1,0 +1,65 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-23T17:10:06.201Z",
+        "line": 10,
+        "name": "login with invalid credentials",
+        "description": "",
+        "id": "login-function;login-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3018000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user is on login page",
+            "match": {
+              "location": "travel.StepDefinitions.loginStepDefinition.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2205000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enter Email,invalid password,click Login Button",
+            "match": {
+              "location": "travel.StepDefinitions.loginStepDefinition.user_enter_email_invalid_password_click_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 110000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Invalid Email or Password message pop up",
+            "match": {
+              "location": "travel.StepDefinitions.loginStepDefinition.verificationText()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "login function",
+    "description": "",
+    "id": "login-function",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]
