@@ -1,12 +1,15 @@
+
+
+
 Feature: login function
 
-  @login
+  @smoke @test1
   Scenario: login with valid credentials
     Given user is on login page
     When user enter Email,password,click Login Button
     Then user logout
 
-  @wip
+  @smoke @test2
   Scenario: login with invalid credentials
     Given user is on login page
     When user enter Email,invalid password,click Login Button

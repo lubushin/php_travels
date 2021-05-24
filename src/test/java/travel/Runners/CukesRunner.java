@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "travel/StepDefinitions",
         dryRun = false,
-        tags = "@wip"
+        tags = "@smoke"
 )
-public class CukeRunner {
+public class CukesRunner {
 }
