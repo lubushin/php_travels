@@ -1,11 +1,14 @@
 package travel.StepDefinitions;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import travel.Pages.loginPage;
 import travel.Utilities.BrowserUtils;
-import travel.Utilities.ConfigurationReader;
 import travel.Utilities.Driver;
+
+import java.util.List;
 
 public class loginStepDefinition extends loginPage {
     loginPage log = new loginPage();
@@ -21,14 +24,35 @@ public class loginStepDefinition extends loginPage {
         BrowserUtils.sleep(2);
     }
 
+    @Then("user is able to see headTables on landing page:")
+    public void user_is_able_to_see_headTables(List<String> expectedOptions) {
+        List<String> actualOptions = BrowserUtils.getElementsText(log.menuHeaders);
+
+
+       // Assert.assertEquals(actualOptions,expectedOptions);
+        System.out.println("expectedOptions = " + expectedOptions);
+        System.out.println("actualOptions = " + actualOptions);
+
+         //System.out.println("actualOptions.get(i) = " + actualOptions.get(i));
+         //System.out.println("expectedOptions.get(i) = " + expectedOptions.get(i));
+     }
+
+
+
+
+
+
     @Then("user logout")
     public void user_logout() {
         log.logout();
+
+        Driver.closeDriver();
     }
+
 
     @When("user enter Email,invalid password,click Login Button")
     public void user_enter_email_invalid_password_click_login_button() {
-    log.loginInvalidCredentials();
+        log.loginInvalidCredentials();
         BrowserUtils.sleep(2);
     }
 
@@ -40,21 +64,5 @@ public class loginStepDefinition extends loginPage {
 
         Driver.closeDriver();
     }
+
 }
-
-//@Then("user is able to see headTables on landing page")
-//public void user_is_able_to_see_headTables() {
-      /* List<String> actualOptions = BrowserUtils.getElementsText(log.menuHeaders);
-        BrowserUtils.sleep(3);
-       System.out.println("expectedOptions = " + expectedOptions);
-        System.out.println("actualOptions = " + actualOptions);
-
-        Assert.assertEquals(actualOptions,expectedOptions);
-        BrowserUtils.sleep(3);*/
-//}
-
-   /* Then user is able to see headTables on landing page
-      | BOOKING    |
-              | MY PROFILE |
-              | WISHLIST   |
-              | NEWSLETTER |*/

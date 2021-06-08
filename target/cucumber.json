@@ -1,22 +1,22 @@
 [
   {
-    "line": 1,
+    "line": 4,
     "elements": [
       {
-        "start_timestamp": "2021-05-23T21:27:23.991Z",
-        "line": 10,
-        "name": "login with invalid credentials",
+        "start_timestamp": "2021-05-31T19:19:51.326Z",
+        "line": 7,
+        "name": "login with valid credentials",
         "description": "",
-        "id": "login-function;login-with-invalid-credentials",
+        "id": "login-function;login-with-valid-credentials",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3967000000,
+              "duration": 2814000000,
               "status": "passed"
             },
-            "line": 11,
+            "line": 8,
             "name": "user is on login page",
             "match": {
               "location": "travel.StepDefinitions.loginStepDefinition.user_is_on_login_page()"
@@ -25,32 +25,67 @@
           },
           {
             "result": {
-              "duration": 2221000000,
+              "duration": 2226000000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "user enter Email,invalid password,click Login Button",
+            "line": 9,
+            "name": "user enter Email,password,click Login Button",
             "match": {
-              "location": "travel.StepDefinitions.loginStepDefinition.user_enter_email_invalid_password_click_login_button()"
+              "location": "travel.StepDefinitions.loginStepDefinition.user_enter_email_password_click_login_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 159000000,
+              "duration": 36000000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "Invalid Email or Password message pop up",
+            "line": 11,
+            "name": "user is able to see headTables on landing page:",
             "match": {
-              "location": "travel.StepDefinitions.loginStepDefinition.verificationText()"
+              "location": "travel.StepDefinitions.loginStepDefinition.user_is_able_to_see_headTables(java.util.List\u003cjava.lang.String\u003e)"
             },
-            "keyword": "And "
+            "rows": [
+              {
+                "cells": [
+                  "HOME"
+                ]
+              },
+              {
+                "cells": [
+                  "VISA"
+                ]
+              },
+              {
+                "cells": [
+                  "COMPANY"
+                ]
+              },
+              {
+                "cells": [
+                  "OUR PARTNERS"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//li[@class\u003d\u0027d-none d-md-block fl\u0027]\"}\n  (Session info: chrome\u003d91.0.4472.77)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Lyubovs-MBP.home\u0027, ip: \u0027fe80:0:0:0:107b:dc91:e5ca:aa18%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u00271.8.0_281\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: /var/folders/p4/z7gtq1ds3dq...}, goog:chromeOptions: {debuggerAddress: localhost:50728}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: b202fff8fe35991d8b6caf007e020232\n*** Element info: {Using\u003dxpath, value\u003d//li[@class\u003d\u0027d-none d-md-block fl\u0027]}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\n\tat travel.Pages.loginPage.logout(loginPage.java:49)\n\tat travel.StepDefinitions.loginStepDefinition.user_logout(loginStepDefinition.java:47)\n\tat ✽.user logout(file:///Users/lyubovubushin/IdeaProjects/H/php_travels/src/test/resources/features/login.feature:17)\n",
+              "duration": 10065000000,
+              "status": "failed"
+            },
+            "line": 17,
+            "name": "user logout",
+            "match": {
+              "location": "travel.StepDefinitions.loginStepDefinition.user_logout()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@wip"
+            "name": "@test1"
           }
         ]
       }

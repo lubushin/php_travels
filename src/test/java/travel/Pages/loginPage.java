@@ -23,7 +23,7 @@ public class loginPage {
     @FindBy(xpath = "//button[.='Login']")
     public WebElement loginButton;
 
-    @FindBy(xpath = "//aside[@class='sidebar-wrapper']")
+    @FindBy(xpath = "//div[@class='navbar-wrapper']")
     public List<WebElement> menuHeaders;
 
     @FindBy(xpath = "//li[@class='d-none d-md-block fl']")
