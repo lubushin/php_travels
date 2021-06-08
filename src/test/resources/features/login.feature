@@ -1,6 +1,6 @@
 Feature: login functionality
 
-  @test1
+  @smoketest1
   Scenario: login with valid credentials
     Given user is on login page
     When user enter Email,password,click Login Button
@@ -13,7 +13,7 @@ Feature: login functionality
 
     Then user logout
 
-  @test2
+  @smoketest2
   Scenario: login with invalid credentials
     Given user is on login page
     When user enter Email,invalid password,click Login Button
